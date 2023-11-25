@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ... (Existing CSS) ... */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3e0d2; /* Light beige background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+    background: linear-gradient(135deg, #2980b9, #2c3e50); /* Gradient background */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 30px;
+    width: 400px; /* Increased width for a bigger calculator */
+}
+
+/* ... (Remaining CSS) ... */
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background for output */
+    border-radius: 10px;
+    padding: 30px; /* Increased padding for the output */
+    text-align: right;
+    font-size: 2rem; /* Increased font size for better visibility */
+    grid-row: span 2;
+}
+
+.output .prev {
+    color: #ffffff; /* Previous calculation text color */
+    font-size: 1.3rem; /* Adjusted font size */
+    margin-bottom: 10px;
+}
+
+.output .curr {
+    font-weight: bold;
+    color: #ffffff; /* Current calculation text color */
+    font-size: 3rem; /* Increased font size */
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem; /* Increased button font size */
+    padding: 20px; /* Adjusted padding */
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added transition for 3D effect */
+    color: #ffffff; /* Button text color */
+    font-weight: bold;
+    background-color: #34495e; /* Button background color */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Added box shadow for 3D effect */
+}
+
+button:hover {
+    transform: translate(2px, 2px); /* Hover effect for 3D appearance */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adjusted shadow on hover */
+}
+
+button.operator,
+button.function,
+button.action,
+button.span-two {
+    padding: 20px 30px; /* Adjusted padding for specific buttons */
+}
+
+button.span-two {
+    grid-column: span 2;
+    background-color: #c0392b; /* Background color for span-two button */
+}
+/* ... (Your existing CSS) ... */
+
+/* Media query for smaller screens */
+/* ... (Your existing CSS) ... */
+
+/* Media query for smaller screens */
+/* ... (Your existing CSS) ... */
+
+/* Media query for smaller screens */
+/* ... (Your existing CSS) ... */
+
+/* Media query for very small screens */
+@media only screen and (max-width: 400px) {
+    .calculator {
+        width: 90%; /* Adjust width for very small screens */
+        padding: 15px; /* Adjust padding */
+        grid-gap: 15px; /* Adjust grid gap */
+    }
+
+    .output {
+        font-size: 1.5rem; /* Adjust font size for output */
+        padding: 15px; /* Adjust padding */
+    }
+
+    button {
+        font-size: 1.2rem; /* Adjust button font size */
+        padding: 15px; /* Adjust button padding */
+    }
+}
